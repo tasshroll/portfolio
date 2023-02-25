@@ -1,0 +1,176 @@
+/* Universal Selector */
+* {
+  margin:0;
+  padding:0;  
+  box-sizing: border-box;
+}
+
+/* Element Selectors */
+body {
+  font-family: "Goudy Bookletter 1911", sans-serif;
+  font-size: 20px;
+  background-color: #FDF8F5;
+  color: #4F4846;
+}
+
+main {
+  padding: 60px 0;
+}
+
+/* li {
+  display: inline;
+  padding: 0px 20px;
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+  color: #FDF8F5;
+} */
+
+/* This class defines the top header
+The children of .header-style are h1 and nav*/
+.header-style{ 
+  display:flex;
+  justify-content: space-between; /* This makes space between h1 & nav children */
+  align-items: flex-start;
+  height: 80px;
+  width: 100%;
+  /* line-height: 400px; Doing nothing*/
+  background-color: #0000;
+  padding: 20px; /* Padding around the h1 & nav children */
+  border-bottom: 10px solid #DDAF94;
+  background-color:  #e2eaf3;
+}
+
+/* Style milky Way background*/
+.sub-header{ 
+  display: flex;
+  justify-content: flex-end;
+  align-items:flex-end;
+  height: 250px;
+  background-image: url("/Assets/images/milky-way.jpg"); 
+}
+
+/* Auto width for Creative/Professional text in sub header*/
+.sub-header p {  
+  width:auto;
+}
+
+.subheading{
+  margin-bottom: 20px;
+  margin-right: 20px;
+  padding: 20px;
+  background-color: #DDAF94;
+}
+
+/* .main-header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 60px;
+  background: #13293d;
+  color: #fff;
+} */
+
+nav ul {
+  display:flex;
+  list-style: none;
+}
+
+nav ul li{
+  margin-left: 15px;
+}
+
+nav ul a  {
+  color: inherit;
+}
+
+main {
+  display:flex;
+  flex-wrap:wrap;
+  flex-grow:1;
+  justify-content: flex-start;
+}
+
+.subtopics {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding : 10px;
+  margin:20px;
+  font-size: 30px;
+}
+
+section h1 {
+  /* display:inline-flex; */
+  font-size:40px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 40%;
+}
+
+section p {
+  /* display:inline-flex; */
+  font-size: 30px;
+  padding-left: 20px;
+  width:fit-content;
+  border-style: none none none solid;
+  border-width: 10px;
+}
+
+
+/* 
+.card {
+  border-style: solid;
+  border-width: 1px;
+  padding: 10px;
+  margin: 20px;
+  flex: 0 0 300px;
+  border-radius: 50px;
+  box-shadow: #40709d;
+}
+
+.card header {
+  padding: 20px;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+}
+
+.card p {
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+} */
+
+
+
+
+
+footer {
+  position: absolute;
+  margin-top: 0;
+  bottom: 0;
+  border-bottom: 10px solid #4F4846;
+  color: #FDF8F5;    
+}
+
+
+/* section {
+  margin-bottom: 0;
+  padding: 20px 10px 40px 10px;
+  border-top: 3px solid #DDAF94;
+} */
+
+?
+  
+?
+ 
+/* Class Selectors */
+
+
