@@ -13,30 +13,17 @@ body {
   color: #4F4846;
 }
 
-main {
-  padding: 60px 0;
-}
-
-/* li {
-  display: inline;
-  padding: 0px 20px;
-  text-decoration: none;
-}
-
-a {
-  text-decoration: none;
-  color: #FDF8F5;
-} */
 
 /* This class defines the top header
+  Tifni Shroll                About Me    Work    Contact Me   Resume
 The children of .header-style are h1 and nav*/
 .header-style{ 
   display:flex;
+  flex-direction: row;
   justify-content: space-between; /* This makes space between h1 & nav children */
-  align-items: flex-start;
-  height: 80px;
+  align-items: center;
+  height: 150px;
   width: 100%;
-  /* line-height: 400px; Doing nothing*/
   background-color: #0000;
   padding: 20px; /* Padding around the h1 & nav children */
   border-bottom: 10px solid #DDAF94;
@@ -46,9 +33,10 @@ The children of .header-style are h1 and nav*/
 /* Style milky Way background*/
 .sub-header{ 
   display: flex;
+  flex-direction: row;
   justify-content: flex-end;
   align-items:flex-end;
-  height: 250px;
+  height: 150px;
   background-image: url("/Assets/images/milky-way.jpg"); 
 }
 
@@ -60,17 +48,9 @@ The children of .header-style are h1 and nav*/
 .subheading{
   margin-bottom: 20px;
   margin-right: 20px;
-  padding: 20px;
+  padding: 15px;
   background-color: #DDAF94;
 }
-
-/* .main-header {
-  display: flex;
-  justify-content: flex-end;
-  padding: 60px;
-  background: #13293d;
-  color: #fff;
-} */
 
 nav ul {
   display:flex;
@@ -85,72 +65,137 @@ nav ul a  {
   color: inherit;
 }
 
-main {
-  display:flex;
-  flex-wrap:wrap;
-  flex-grow:1;
-  justify-content: flex-start;
-}
 
 .subtopics {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: flex-start;
+  display:flex; 
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  background-color: #ced8d6;
+  /* Tell item to take 100% of viewport*/
+  width: 100%; 
   padding : 10px;
   margin:20px;
   font-size: 30px;
 }
 
-section h1 {
-  /* display:inline-flex; */
+.subtopics h1 {
+
   font-size:40px;
   padding-left: 20px;
   padding-right: 20px;
-  padding-top: 20px;
+  padding-top: 40px;
   padding-bottom: 20px;
-  width: 40%;
+  border-style: none;
+  text-align:left; 
+  /* Tell h1 "About Me" to take a % of viewport*/
+  width: 20%;
+  /* flex:40%; */
+  /*flex: 0 1 auto. It sizes the item based on its width/height properties (or its content if not set).*/
+  flex: 0, 1, auto; 
 }
 
-section p {
+.subtopics p {
+/* section p { */
   /* display:inline-flex; */
   font-size: 30px;
-  padding-left: 20px;
-  width:fit-content;
+  padding: 40px;
+  /* Tell p to take remaining % of viewport*/
+  width:80%;
   border-style: none none none solid;
+  border-width: 10px;
+  /* flex: 0 0 300px; */
+
+}
+
+
+.work-container {
+  display:flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background-color: dodgerblue;
+  padding : 3px;
+  margin:20px;
+  gap: 10px;
+  /* flex: 0 0 300px;  */
+}
+
+.work-container aside {
+  flex: 0 0 21%;  /* increased 1% to account for border */
+  background-color: #b9c6ae;
+  height:60vh;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: 0px;
+  /* margin-left: 20px;  */
+  text-align: left;
+  border-style: none solid none none;
   border-width: 10px;
 }
 
-
-/* 
-.card {
-  border-style: solid;
-  border-width: 1px;
-  padding: 10px;
-  margin: 20px;
-  flex: 0 0 300px;
-  border-radius: 50px;
-  box-shadow: #40709d;
+aside h1 {
+  font-size:40px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 40px;
+  padding-bottom: 20px;
 }
 
-.card header {
+.work-container div p {
+  /* width:20%; */
+  font-size: 30px;
+  padding:40px;
+  border-style: none none none solid;
+  border-width:10px;
+  flex: 0 0 800px;
+  background-color: #f6b9ef;
+}
+
+.work-card {
+  /* Grow is 3 so card gets larger with re-sizing
+     75% is fitting the work card next to the Aside when on a regular viewport*/
+  flex: 0 0 60%; 
+  height:20vh;
+  background-color: rgb(245, 119, 119);
+  border-width: 10px;
+  border-style: solid;
+  padding:10px;
+  margin :0 ;
+}
+
+.work-card header {
+  padding: 20px;
+}
+
+
+.card img {
+  width: 100%;
+}
+
+
+
+
+
+/* CARD that occupies half of the remaining space */
+/* HOW DO I SLIDE THIS UNDER WORK:SURF REPORT AND RIGHT OF ASIDE???????? */
+.led-wall-card{
+  background-color: rgb(251, 248, 248);
+  border-width: 10px;
+  border-style: solid;
+  padding:10px;
+  margin :20px;
+  flex: 0 0 20%;  /* At 20% it slides up */
+  height:200px;
+}
+
+.led-wall-card header {
   padding: 20px;
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
 }
 
-.card p {
-  text-align: center;
-}
-
-.card img {
-  width: 100%;
-} */
-
-
-
-
+.led-wall-card p {
+  text-align: left;
 
 footer {
   position: absolute;
@@ -160,17 +205,26 @@ footer {
   color: #FDF8F5;    
 }
 
+@media screen and (max-width: 768px) {
+  /* Use flex-direction to stack the navbar, sidebar, and body */
+  nav,
+  .work-container {
+    flex-direction: column;
+  }
+  /* Make the sidebar stack below the body */
+  aside {
+    order: 2;
+  }
+  /* Change the header background */
+  header {
+    background: #772014;
+  }
+  /* Change the navbar and footer background */
+  nav,
+  footer {
+    background-color: #bb8588;
+  }
+}
 
-/* section {
-  margin-bottom: 0;
-  padding: 20px 10px 40px 10px;
-  border-top: 3px solid #DDAF94;
-} */
-
-?
-  
-?
- 
-/* Class Selectors */
 
 
