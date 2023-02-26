@@ -65,6 +65,11 @@ nav ul a  {
   color: inherit;
 }
 
+main {
+  display:flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
 
 .subtopics {
   display:flex; 
@@ -107,20 +112,7 @@ nav ul a  {
 
 }
 
-
-.work-container {
-  display:flex;
-  flex-flow: row wrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-  background-color: dodgerblue;
-  padding : 3px;
-  margin:20px;
-  gap: 10px;
-  /* flex: 0 0 300px;  */
-}
-
-.work-container aside {
+aside {
   flex: 0 0 21%;  /* increased 1% to account for border */
   background-color: #b9c6ae;
   height:60vh;
@@ -139,6 +131,18 @@ aside h1 {
   padding-right: 20px;
   padding-top: 40px;
   padding-bottom: 20px;
+}
+
+.work-container {
+  display:flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background-color: dodgerblue;
+  padding : 3px;
+  margin:20px;
+  gap: 10px;
+  /* flex: 0 0 300px;  */
 }
 
 .work-container div p {
@@ -170,6 +174,11 @@ aside h1 {
 
 .card img {
   width: 100%;
+}
+
+/* Any button over which the user's pointer is hovering */
+button:hover {
+  color: blue;
 }
 
 
