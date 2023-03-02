@@ -5,6 +5,12 @@
   box-sizing: border-box;
 }
 
+/* Variables here */
+:root{
+  --aboutme-contact-bgcolor: rgb(227, 227, 231);
+  --box-background:  #8da8a5;
+}
+
 /* Element Selectors */
 body {
   font-family: "Goudy Bookletter 1911", sans-serif;
@@ -22,12 +28,17 @@ The children of .header-style are h1 and nav*/
   flex-direction: row;
   justify-content: space-between; /* This makes space between h1 & nav children */
   align-items: center;
-  height: 150px;
+  height: 130px;
   width: 100%;
-  background-color: #0000;
   padding: 20px; /* Padding around the h1 & nav children */
-  border-bottom: 10px solid #DDAF94;
-  background-color:  #e2eaf3;
+  background-color: black;
+}
+
+/* Style Tifni Shroll */
+header h1 {
+  background-color: var(--box-background);
+  padding: 9px;
+  padding-left: 45px;
 }
 
 /* Style milky Way background*/
@@ -36,14 +47,15 @@ The children of .header-style are h1 and nav*/
   flex-direction: row;
   align-items:flex-end;
   height: 150px;
-  background-image: url("Assets/images/milky-way.jpg");
+  background-image: url("../images/milky-way.jpg");
   justify-content: flex-end;
-
 }
 
 /* Auto width for Creative/Professional text in sub header*/
 .sub-header p {  
   width:auto;
+  /* font-size:130%; */
+  font-size: 30px;
   
 }
 
@@ -51,7 +63,7 @@ The children of .header-style are h1 and nav*/
   margin-bottom: 20px;
   margin-right: 20px;
   padding: 15px;
-  background-color: #DDAF94;
+  background-color:var(--box-background);
 }
 
 nav ul {
@@ -64,20 +76,21 @@ nav ul li{
 }
 
 nav ul a  {
-  color: inherit;
+  color: var(--box-background);
 }
 
 main {
   display:flex;
   flex-wrap: wrap;
   flex-direction: row;
+  background-color: var(--aboutme-contact-bgcolor);
 }
 
 .subtopics {
   display:flex; 
   flex-flow: row wrap;
   justify-content: flex-start;
-  background-color: #ced8d6;
+  /* background-color: var(--aboutme-contact-bgcolor); */
   /* Tell item to take 100% of viewport*/
   width: 100%; 
   padding : 10px;
@@ -85,16 +98,13 @@ main {
   font-size: 30px;
 }
 
+/* About Me Section */
 .subtopics h1 {
-
   font-size:40px;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 40px;
-  padding-bottom: 20px;
+  padding: 20px 20px 10px 20px;
   border-style: none;
-  text-align:left; 
-  /* Tell h1 "About Me" to take a % of viewport*/
+  text-align:right; 
+  /* Tell h1 "About Me" to take a % of left viewport*/
   width: 20%;
   /* flex:40%; */
   /*flex: 0 1 auto. It sizes the item based on its width/height properties (or its content if not set).*/
@@ -131,7 +141,7 @@ main {
 
 aside {
   flex: 0 0 20.5%;  /* increased 1% to account for border */
-  background-color: #b9c6ae;
+  /* background-color: var(--aboutme-contact-bgcolor); */
   height:60vh;
   padding-left: 20px;
   padding-right: 20px;
@@ -144,10 +154,8 @@ aside {
 
 aside h1 {
   font-size:40px;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 40px;
-  padding-bottom: 20px;
+  padding: 20px 20px 40px 20px;
+  text-align: right;
 }
 
 .work-container {
@@ -155,27 +163,43 @@ aside h1 {
   flex-flow: row wrap;
   justify-content: flex-start;
   align-items: flex-start;
-  background-color: dodgerblue;
+  /* background-color:var(--aboutme-contact-bgcolor); */
   padding : 3px;
   /* margin:20px; */
   gap: 10px;
   flex: 0 0 78%; 
 }
 
-.work-container div p {
-  /* width:20%; */
-  font-size: 30px;
-  padding:40px;
-  border-style: none none none solid;
-  border-width:10px;
-  flex: 0 0 800px;
-  background-color: #f6b9ef;
+.hero {
+  /* height: 800px;
+  width: 100%;
+  margin-bottom: 25px; */
+  background-image: url("../Assets/images/surf.avif");
+  background-size: cover auto;
+  background-position: center;
 }
 
-.work-card header {
-  padding: 20px;
+.work-container header {
+  padding: 20px 20px 20px 20px;
+  background-color: var(--box-background);
+  text-align:center;
+  font-size: 40px;
 }
 
+/* .work-card {
+display: flex;
+flex-direction: column;
+justify-content: flex;
+}
+
+
+
+.work-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex;
+  } */
+  
 .flex-items {
   display:flex;
   min-height: 20vh;
@@ -183,19 +207,38 @@ aside h1 {
   flex-basis: 48%;
 }
 
+/* Surf Report */
 .flex-items:first-child {
   /* Grow is 3 so card gets larger with re-sizing
      75% is fitting the work card next to the Aside when on a regular viewport*/
   /* flex: 0 0 60%;  */
   /* height:20vh; */
   flex-basis: 100%;
-  background-color: rgb(245, 119, 119);
+  background-image: url("../Assets/images/surf.avif");
   border-width: 10px;
   border-style: solid;
-  padding:10px;
+  padding: 10px 10px 30px 0px;
   margin :0 ;
+  align-items: center;
+}
+/* 
+.flex-items:nth-child(1) {
+  background-image: url("../Assets/images/surf.avif");
+  background-size:auto cover;
+  background-position: center;
+} */
+
+.flex-items:nth-child(2) {
+  background-image: url("../Assets/images/trees.avif");
+  background-size:auto cover;
+  background-position: center;
 }
 
+.flex-items:nth-child(3) {
+  background-image: url("../Assets/images/kitchen.avif");
+  background-size:auto cover;
+  background-position: center;
+}
 .card img {
   width: 100%;
 }
@@ -216,8 +259,10 @@ aside h1 {
 
 .led-wall-card header {
   padding: 20px;
-  border-top-left-radius: 50px;
-  border-top-right-radius: 50px;
+  padding: 20px;
+  background-color: var(--box-background);
+  text-align: center;
+  font-size: 40px;
 }
 
 .led-wall-card p {
