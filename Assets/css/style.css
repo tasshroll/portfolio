@@ -3,6 +3,7 @@
   margin:0;
   padding:0;  
   box-sizing: border-box;
+  text-size-adjust: none;
 }
 
 /* Variables here */
@@ -14,7 +15,7 @@
 /* Element Selectors */
 body {
   font-family: "Goudy Bookletter 1911", sans-serif;
-  font-size: 20px;
+  font-size: 30px;
   background-color: #FDF8F5;
   color: #4F4846;
 }
@@ -94,10 +95,11 @@ main {
   padding : 10px;
   margin:20px;
   font-size: 30px;
-}
+  }
 
 /* About Me Section */
 .subtopics h1 {
+  /* font-size:40px; */
   font-size:40px;
   padding: 20px 20px 10px 20px;
   border-style: none;
@@ -106,13 +108,14 @@ main {
   width: 20%;
   /* flex:40%; */
   /*flex: 0 1 auto. It sizes the item based on its width/height properties (or its content if not set).*/
-  flex: 0, 1, auto; 
+  flex: 1, 2, auto; 
 }
 
 .subtopics p {
 /* section p { */
   /* display:inline-flex; */
-  font-size: 30px;
+  /* font-size: 30px; */
+  font-size: 90%;
   padding: 40px;
   /* Tell p to take remaining % of viewport*/
   width:80%;
@@ -131,7 +134,7 @@ main {
 }
 
 aside {
-  flex: 0 0 20.5%;  /* increased 1% to account for border */
+  flex: 0 1 20.5%;  /* increased 1% to account for border */
   /* background-color: var(--aboutme-contact-bgcolor); */
   height:64vh;
   padding-left: 20px;
@@ -154,9 +157,7 @@ aside h1 {
   flex-flow: row wrap;
   justify-content: flex-start;
   align-items: flex-start;
-  /* background-color:var(--aboutme-contact-bgcolor); */
   padding : 3px;
-  /* margin:20px; */
   gap: 10px;
   flex: 0 0 78%; 
 }
@@ -164,10 +165,16 @@ aside h1 {
 .work-container header {
   padding: 20px 20px 20px 20px;
   background-color: var(--box-background);
-  text-align:center;
+  /* text-align:center; */
   font-size: 40px;
 }
 
+.work-container p {
+  padding: 20px 20px 20px 20px;
+  background-color: var(--box-background);
+  /* text-align:center; */
+  font-size: 30px;
+}
   #surf-img {
     width: 600px;
     height: 400px;
@@ -212,10 +219,17 @@ aside h1 {
   
 .flex-items {
   display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
   min-height: 20vh;
   max-height: 20vh;
   flex-basis: 47%; /* Cards that are half the width of viewport */
   border-color:var(--box-background);
+}
+
+.flex-items header {
+  font-weight: 900;
 }
 
 /* Surf Report */
@@ -225,7 +239,6 @@ aside h1 {
   padding: 10px 10px 30px 0px;
   margin :0 ;
   margin-left: 30px;
-  align-items: center;
 }
 
 /* CARD that occupies half of the remaining space */
@@ -236,7 +249,6 @@ aside h1 {
   margin-left: 30px;
   /* flex: 0 0 50%;   */
   height:200px;
-  align-items: center;
 
 }
 
@@ -282,11 +294,15 @@ footer.subtopics{
 
 .footer-style {
   display:flex;
-  justify-content: space-around;
-  width: 80%;
-  font-size: 70%;
-  margin:0;
+  justify-content: space-evenly;
+  width: 75%;
+  font-size: 90%;
+  margin-left: 10px;
+  border-style: none none none solid;
+  border-width: 10px;
+  align-items: center;
 }
+
 
 @media screen and (max-width: 768px) {
   /* Use flex-direction to stack the navbar, sidebar, and body */
@@ -309,5 +325,71 @@ footer.subtopics{
   }
 }
 
+
+
+/* FIX BELOW
+/* When using `max-width` as the breakpoint, you must go from widest to narrowest to avoid conflict */
+
+/* Tablets - header changes color */
+@media screen and (max-width: 1000px) {
+  .header-style nav ul {
+    background: #772014;
+    flex-direction: column;
+  }
+  main {
+    flex-direction: column;
+  }
+  aside {
+    display : none;
+    margin-left: 0px;
+    order: 2;
+  }
+    
+.flex-items {
+  flex-basis: 100%; /* Cards take up the viewport */
+}
+
+}
+
+/* Large smartphones - navbar changes color */
+@media screen and (max-width: 768px) {
+  .header-style nav ul {
+    background: #772014;
+    flex-direction: column;
+  }
+nav {
+    background-color: #bb8588;
+  }
+  main {
+    flex-direction: column;
+  }
+
+  aside {
+    display : none;
+    margin-left: 0px;
+    order: 2;
+  }
+}
+
+/* Small smartphones - image placeholders change color */
+@media screen and (max-width: 576px) {
+  .header-style nav ul {
+    background: #687714;
+    flex-direction: column;
+  }
+main {
+    flex-direction: column;
+  }
+  
+  .subtopics {
+    flex-direction: column ;
+  }
+  aside {
+    display : none;
+    margin-left: 0px;
+    order: 2;
+  }
+  
+}
 
 
