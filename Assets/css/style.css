@@ -1,15 +1,15 @@
 /* Universal Selector */
 * {
-  margin:0;
-  padding:0;  
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
   text-size-adjust: none;
 }
 
 /* Variables here */
-:root{
+:root {
   --aboutme-contact-bgcolor: rgb(227, 227, 231);
-  --box-background:  #8da8a5;
+  --box-background: #8da8a5;
   --box-shadow-cards: 0 0 100px rgb(102, 122, 108);
 }
 
@@ -24,14 +24,16 @@ body {
 /* This class defines the top header
   Tifni Shroll                About Me    Work    Contact Me   Resume
 The children of .header-style are h1 and nav*/
-.header-style{ 
-  display:flex;
+.header-style {
+  display: flex;
   flex-direction: row;
-  justify-content: space-between; /* This makes space between h1 & nav children */
+  justify-content: space-between;
+  /* This makes space between h1 & nav children */
   align-items: center;
   height: 130px;
   width: 100%;
-  padding: 20px; /* Padding around the h1 & nav children */
+  padding: 20px;
+  /* Padding around the h1 & nav children */
   background-color: black;
 }
 
@@ -42,79 +44,80 @@ header h1 {
   padding-left: 45px;
 }
 
-.sub-header{ 
+.sub-header {
   display: flex;
   flex-direction: row;
-  align-items:flex-end;
+  align-items: flex-end;
   height: 220px;
   justify-content: flex-end;
 }
 
 /* Auto width for Creative/Professional text in sub header*/
-.sub-header p {  
-  width:auto;
+.sub-header p {
+  width: auto;
   font-size: 130%;
   font-weight: 900;
 }
 
-.subheading{
+.subheading {
   margin-bottom: 20px;
   margin-right: 20px;
   padding: 15px;
-  background-color:var(--box-background);
+  background-color: var(--box-background);
 }
 
 nav ul {
-  display:flex;
+  display: flex;
   list-style: none;
 }
 
-nav ul li{
+nav ul li {
   margin-left: 15px;
 }
 
 /* Teal color on header nav's */
-nav ul a  {
+nav ul a {
   color: var(--box-background);
 }
 
 main {
-  display:flex;
+  display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   background-color: var(--aboutme-contact-bgcolor);
 }
 
 .subtopics {
-  display:flex; 
+  display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
   /* Tell item to take 100% of viewport*/
-  width: 100%; 
-  padding : 10px;
-  margin:20px;
+  width: 100%;
+  padding: 10px;
+  margin: 20px;
   font-size: 130%;
-  }
+}
 
 
 .subtopics p {
   font-size: 90%;
   padding: 40px;
   /* Tell p to take remaining % of viewport*/
-  width:80%;
+  width: 80%;
   border-style: none none none solid;
   border-width: 10px;
   /* flex: 0 0 300px; */
 }
 
 aside {
-  flex: 0 0 20.5%;  /* increased 1% to account for border */
+  flex: 0 0 20.5%;
+  /* increased 1% to account for border */
   /* background-color: var(--aboutme-contact-bgcolor); */
-  height:64vh;
+  height: 64vh;
   padding-left: 20px;
   padding-right: 20px;
   margin-left: 0px;
-  margin-left: 20px; 
+  margin-left: 20px;
   text-align: left;
   border-style: none solid none none;
   border-width: 10px;
@@ -122,32 +125,32 @@ aside {
 
 /* About Me Section */
 .subtopics h1 {
-  font-size:40px;
+  font-size: 40px;
   padding: 20px 20px 10px 20px;
   border-style: none;
-  text-align:right; 
+  text-align: right;
   /* Tell h1 "About Me" to take a % of left viewport*/
   width: 20%;
   /*flex: 0 1 auto. It sizes the item based on its width/height properties (or its content if not set).*/
-  flex: 1, 2, auto; 
+  flex: 1, 2, auto;
 }
 
 aside h1 {
-  font-size:40px;
+  font-size: 40px;
   padding: 20px 20px 10px 20px;
   text-align: right;
-  border-style:none;
-  flex:1,2, auto;
+  border-style: none;
+  flex: 1, 2, auto;
 }
 
 .work-container {
-  display:flex;
+  display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
   align-items: flex-start;
-  padding : 3px;
+  padding: 3px;
   gap: 10px;
-  flex: 0 0 78%; 
+  flex: 0 0 78%;
 }
 
 .work-container div header {
@@ -164,56 +167,52 @@ aside h1 {
   font-size: 130%;
 }
 
-#card{
-display:block;
+#surf-img {
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/surf.avif");
+  background-size: cover;
 }
 
-  #surf-img {
-    width: 100%;
-    height: 100%;
-    background-image: url("../images/surf.avif");
-    background-size: cover;
-  }
-
-  #trees-img {
-    /* width: 600px;
+#trees-img {
+  /* width: 600px;
     height: 400px; */
-    width: 100%;
-    height: 100%;
-    background-image: url("../images/trees.avif");
-    background-size: cover;
-  }
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/trees.avif");
+  background-size: cover;
+}
 
-  #kitchen-img {
-    width: 100%;
-    height: 100%;
-    background-image: url("../images/kitchen.avif");
-    background-size: cover;
-    background-position:bottom;
-  }
+#kitchen-img {
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/kitchen.avif");
+  background-size: cover;
+  background-position: bottom;
+}
 
-  #waves-img {
-    background-image: url("../images/waves.avif");
-    background-size: cover;
-  }
+#waves-img {
+  background-image: url("../images/waves.avif");
+  background-size: cover;
+}
 
-  #books-img {
-    width: 100%;
-    height: 100%;
-    background-image: url("../images/books.avif");
-    background-size: cover;
-  }
+#books-img {
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/books.avif");
+  background-size: cover;
+}
 
-  #crystals-img {
-    width: 100%;
-    height: 100%;
-    background-image: url("../images/crystals.avif");
-    background-size: cover;
-    background-position: left;
-  }
-  
+#crystals-img {
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/Crystals.avif");
+  background-size: cover;
+  background-position: left;
+}
+
 .flex-items {
-  display:flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
@@ -222,7 +221,7 @@ display:block;
   flex: 1, 1, 47%;
   /* Cards that are half the width of viewport */
   max-width: 47%;
-  border-color:var(--box-background);
+  border-color: var(--box-background);
 }
 
 /* Create a shadow around images when cursor hovors */
@@ -230,8 +229,7 @@ display:block;
 #trees-img:hover,
 #kitchen-img:hover,
 #books-img:hover,
-#crystals-img:hover 
-  {
+#crystals-img:hover {
   box-shadow: var(--box-shadow-cards);
 }
 
@@ -242,21 +240,21 @@ display:block;
 /* Surf Report */
 .flex-items:first-child {
   flex-basis: 100%;
-  max-width:100%;
+  max-width: 100%;
   border-style: solid;
   padding: 10px 10px 30px 0px;
-  margin :0 ;
-  margin-left: 30px;
+  margin: 0;
+  /* margin-left: 30px; */
 }
 
 /* CARD that occupies half of the remaining space */
-.card{
-  background-color: rgb(251, 248, 248);
+.card {
+  /* background-color: rgb(251, 248, 248); */
   border-style: solid;
-  margin :5px;
-  margin-left: 30px;
+  margin: 5px;
+  /* margin-left: 30px; */
   /* flex: 0 0 50%;   */
-  height:200px;
+  height: 200px;
 }
 
 .card header {
@@ -268,17 +266,17 @@ display:block;
 }
 
 footer {
-  margin:0;
+  margin: 0;
   background-color: var(--aboutme-contact-bgcolor);
-  padding:0;
+  padding: 0;
 }
 
-footer.subtopics{
-  margin:0;
+footer.subtopics {
+  margin: 0;
 }
 
 .footer-style {
-  display:flex;
+  display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   width: 75%;
@@ -291,35 +289,41 @@ footer.subtopics{
 
 @media screen and (max-width: 1334px) {
   aside {
-    display : none;
+    display: none;
     margin-left: 0px;
     order: 2;
   }
+
   .work-container {
     flex-basis: 100%;
   }
+
   .flex-items {
-    flex-basis: 100%; /* Cards take up the viewport */
+    flex-basis: 100%;
+    /* Cards take up the viewport */
     max-width: 100%;
   }
-}  
+}
 
 /* When using `max-width` as the breakpoint, you must go from widest to narrowest to avoid conflict */
 
 /* Tablets - header changes color */
 @media screen and (max-width: 1000px) {
-  .subtopics{
+  .subtopics {
     flex-direction: column;
   }
+
   .subheading {
     display: none;
   }
+
   .header-style {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-text-align: left;
+    text-align: left;
   }
+
   .header-style nav ul {
     flex-direction: column;
   }
@@ -327,9 +331,10 @@ text-align: left;
   .footer-style {
     flex-direction: column;
   }
+
   .footer-style nav {
     flex-direction: column;
-   }
+  }
 
   main {
     flex-direction: column;
@@ -338,47 +343,45 @@ text-align: left;
 
 /* Large smartphones - navbar changes color */
 @media screen and (max-width: 768px) {
-  .subtopics{
+  .subtopics {
     flex-direction: column;
   }
+
   .subheading {
     display: none;
   }
+
   .header-style {
     flex-direction: column;
   }
+
   .header-style nav ul {
     flex-direction: column;
   }
-  .footer-style ul{
+
+  .footer-style ul {
     flex-direction: column;
   }
- .footer-style nav ul {
-  flex-direction: column;
- }
 
- .subtopics h1 {
-  font-size: 30px;
-}
-.card {
-  flex-basis: 100%;
-  max-width: 100%;
-}
+  .footer-style nav ul {
+    flex-direction: column;
+  }
+
+  .subtopics h1 {
+    font-size: 30px;
+  }
+
+  .card {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
 
   main {
     flex-direction: column;
   }
 
   aside {
-    display : none;
+    display: none;
     margin-left: 0px;
     order: 2;
   }
-
-
-
-
-
-
-
-

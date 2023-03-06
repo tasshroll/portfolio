@@ -16,7 +16,10 @@ This project was built as a basis for my first practice porfolio.
 I learned to analyze the mockup and sketch out what elements I would dbe using and the various flex box containers for each. I utilized my tutor and Ask BCS for help along the way with various problems. I worked from top down on the Header, Body, and then Footer.
 
 My Portfolio Screenshot
-https://github.com/tasshroll/portfolio/issues/1
+
+https://user-images.githubusercontent.com/125221566/222995617-133ceb68-2bda-456f-8702-a76634f298e0.png
+
+or https://github.com/tasshroll/portfolio/issues/2
 
 ## Installation 
 N/A
