@@ -16,7 +16,7 @@
 /* Element Selectors */
 body {
   font-family: "Goudy Bookletter 1911", sans-serif;
-  font-size: 30px;
+  font-size: 130%;
   background-color: #FDF8F5;
   color: #4F4846;
 }
@@ -53,7 +53,7 @@ header h1 {
 /* Auto width for Creative/Professional text in sub header*/
 .sub-header p {  
   width:auto;
-  font-size: 30px;
+  font-size: 130%;
   font-weight: 900;
 }
 
@@ -93,8 +93,32 @@ main {
   width: 100%; 
   padding : 10px;
   margin:20px;
-  font-size: 30px;
+  font-size: 130%;
   }
+
+
+.subtopics p {
+  font-size: 90%;
+  padding: 40px;
+  /* Tell p to take remaining % of viewport*/
+  width:80%;
+  border-style: none none none solid;
+  border-width: 10px;
+  /* flex: 0 0 300px; */
+}
+
+aside {
+  flex: 0 0 20.5%;  /* increased 1% to account for border */
+  /* background-color: var(--aboutme-contact-bgcolor); */
+  height:64vh;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: 0px;
+  margin-left: 20px; 
+  text-align: left;
+  border-style: none solid none none;
+  border-width: 10px;
+}
 
 /* About Me Section */
 .subtopics h1 {
@@ -108,34 +132,12 @@ main {
   flex: 1, 2, auto; 
 }
 
-.subtopics p {
-  font-size: 90%;
-  padding: 40px;
-  /* Tell p to take remaining % of viewport*/
-  width:80%;
-  border-style: none none none solid;
-  border-width: 10px;
-  /* flex: 0 0 300px; */
-
-}
-
-aside {
-  flex: 0 1 20.5%;  /* increased 1% to account for border */
-  /* background-color: var(--aboutme-contact-bgcolor); */
-  height:64vh;
-  padding-left: 20px;
-  padding-right: 20px;
-  margin-left: 0px;
-  margin-left: 20px; 
-  text-align: left;
-  border-style: none solid none none;
-  border-width: 10px;
-}
-
 aside h1 {
   font-size:40px;
-  padding: 20px 20px 40px 20px;
+  padding: 20px 20px 10px 20px;
   text-align: right;
+  border-style:none;
+  flex:1,2, auto;
 }
 
 .work-container {
@@ -148,18 +150,22 @@ aside h1 {
   flex: 0 0 78%; 
 }
 
-.work-container header {
-  padding: 20px 20px 20px 20px;
+.work-container div header {
+  padding: 20px 20px 0px 20px;
   background-color: var(--box-background);
   /* text-align:center; */
-  font-size: 40px;
+  font-size: 140%;
 }
 
 .work-container p {
-  padding: 20px 20px 20px 20px;
+  padding: 0px 20px 20px 20px;
   background-color: var(--box-background);
   /* text-align:center; */
-  font-size: 30px;
+  font-size: 130%;
+}
+
+#card{
+display:block;
 }
 
   #surf-img {
@@ -213,7 +219,9 @@ aside h1 {
   align-items: flex-start;
   min-height: 20vh;
   max-height: 20vh;
-  flex-basis: 47%; /* Cards that are half the width of viewport */
+  flex: 1, 1, 47%;
+  /* Cards that are half the width of viewport */
+  max-width: 47%;
   border-color:var(--box-background);
 }
 
@@ -234,6 +242,7 @@ aside h1 {
 /* Surf Report */
 .flex-items:first-child {
   flex-basis: 100%;
+  max-width:100%;
   border-style: solid;
   padding: 10px 10px 30px 0px;
   margin :0 ;
@@ -241,7 +250,7 @@ aside h1 {
 }
 
 /* CARD that occupies half of the remaining space */
-.led-wall-card{
+.card{
   background-color: rgb(251, 248, 248);
   border-style: solid;
   margin :5px;
@@ -250,34 +259,12 @@ aside h1 {
   height:200px;
 }
 
-.led-wall-card header {
+.card header {
   padding: 20px;
   padding: 20px;
   background-color: var(--box-background);
-  text-align: center;
-  font-size: 40px;
-}
-
-.led-wall-card p {
   text-align: left;
-}
-
-/* The user's cursor is positioned over the element */
-.subtopics nav button:hover {
-/* button:hover { */
-  background-color: #772014;
-}
-
-/* The user is actively pressing down on the element */
-.subtopics nav button:active {
-  font-size: 180%;
-  box-shadow: 0 0 10px #000 inset;
-}
-
-/* The element is currently in focus, either by tabbing to or clicking on it */
-.subtopics nav button:focus {
-  outline: none;
-  border-color: #8ac4ff;
+  font-size: 140%;
 }
 
 footer {
@@ -308,7 +295,14 @@ footer.subtopics{
     margin-left: 0px;
     order: 2;
   }
-}
+  .work-container {
+    flex-basis: 100%;
+  }
+  .flex-items {
+    flex-basis: 100%; /* Cards take up the viewport */
+    max-width: 100%;
+  }
+}  
 
 /* When using `max-width` as the breakpoint, you must go from widest to narrowest to avoid conflict */
 
@@ -340,17 +334,8 @@ text-align: left;
   main {
     flex-direction: column;
   }
-  aside {
-    display : none;
-    margin-left: 0px;
-    order: 2;
-  }
-    
-.flex-items {
-  flex-basis: 100%; /* Cards take up the viewport */
 }
 
-}
 /* Large smartphones - navbar changes color */
 @media screen and (max-width: 768px) {
   .subtopics{
@@ -372,9 +357,14 @@ text-align: left;
   flex-direction: column;
  }
 
-nav {
-    background-color: #bb8588;
-  }
+ .subtopics h1 {
+  font-size: 30px;
+}
+.card {
+  flex-basis: 100%;
+  max-width: 100%;
+}
+
   main {
     flex-direction: column;
   }
