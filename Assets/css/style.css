@@ -11,6 +11,7 @@
   --aboutme-contact-bgcolor: rgb(227, 227, 231);
   --box-background: #8da8a5;
   --box-shadow-cards: 0 0 100px rgb(102, 122, 108);
+  --body-font-color:  #4F4846;
 }
 
 /* Element Selectors */
@@ -18,7 +19,7 @@ body {
   font-family: "Goudy Bookletter 1911", sans-serif;
   font-size: 130%;
   background-color: #FDF8F5;
-  color: #4F4846;
+  color: var(--body-font-color);
 }
 
 /* This class defines the top header
@@ -158,6 +159,7 @@ aside h1 {
   background-color: var(--box-background);
   /* text-align:center; */
   font-size: 140%;
+  color: var(--body-font-color)
 }
 
 .work-container p {
@@ -165,6 +167,15 @@ aside h1 {
   background-color: var(--box-background);
   /* text-align:center; */
   font-size: 130%;
+  color: var(--body-font-color)
+}
+
+#food-img {
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/food.jpeg");
+  background-size: cover;
+  background-position: bottom;
 }
 
 #surf-img {
@@ -230,6 +241,7 @@ aside h1 {
 #kitchen-img:hover,
 #books-img:hover,
 #crystals-img:hover {
+  box-shadow: ;
   box-shadow: var(--box-shadow-cards);
 }
 
@@ -239,10 +251,10 @@ aside h1 {
 
 /* Surf Report */
 .flex-items:first-child {
-  flex-basis: 100%;
+  flex-basis: 95%;
   max-width: 100%;
   border-style: solid;
-  padding: 10px 10px 30px 0px;
+  /* padding: 10px 10px 30px 0px; */
   margin: 0;
   /* margin-left: 30px; */
 }
