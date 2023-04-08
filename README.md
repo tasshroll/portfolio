@@ -17,9 +17,8 @@ I learned to analyze the mockup and sketch out what elements I would dbe using a
 
 My Portfolio Screenshot
 
-https://user-images.githubusercontent.com/125221566/222995617-133ceb68-2bda-456f-8702-a76634f298e0.png
+![Portfolio Screenshot](Assets/images/portfolio-screenshot.png)
 
-or https://github.com/tasshroll/portfolio/issues/2
 
 ## Installation 
 N/A
